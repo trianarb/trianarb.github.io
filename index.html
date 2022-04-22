@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-half img:hover {
+        opacity: 1
+    }
+</style>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Cerrar Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>Antonio<br>Triana</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicio</a>
+            <a href="#scholarship" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Escolaridad</a>
+            <a href="#jobHistory" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Trabajos</a>
+            <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Proyectos</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Antonio Triana</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="cerrar menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="scholarship">
+            <h1 class="w3-jumbo"><b>QE & Dev</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>Escolaridad.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- Job History -->
+        <div class="w3-container" id="jobHistory" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Trabajos.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <b>Los últimos 5 años me he dedicado a diseñar, desarrollar y testear aplicaciones, software, bases de datos, etc.</b>
+            <div class="w3-margin-top w3-padding">
+                <h3>Mi experiencia</h3>
+                <b>Freelance</b>
+                <p>
+                    Como Freelancer utilicé la plataforma de Angelist para ofrecer mis servicios como desarrollador web, 
+                    ruby on rails y php eran mi día a día.
+                </p>
+                <b>Web Office</b>
+                <p>
+                    Mis tareas eran las de un desarrollador junior, mantuve una aplicación ya creada por un senior, migraciones 
+                    a la base de datos, creación de modelos, controladores, inyecciones de dependencias y migrar módulos viejos 
+                    a .netcore.
+                </p>
+                <b>Bextec Solution</b>
+                <p>
+                    El lugar donde más tiempo trabajé, mis tareas eran la creación y mantenimiento de API REST, creación y normalización de base de datos, 
+                    deploy a producción, optimización de código, limpieza de código y testing.
+                </p>
+                <b>Accenture</b>
+                <p>
+                    Mi actual empleo, me dedico al Automation y Functional testing.
+                </p>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="w3-container" id="projects" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Proyectos.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Estos son algunos de los proyectos que he realizado o he trabajado</p>
+            <div class="w3-margin">
+                <b>Portal gestor de proveedores</b>
+                <p>
+                    descripción
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Gestor de historial académico</b>
+                <p>
+                    descripción
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Code Corner</b>
+                <p>
+                    Blog interno para subir cursos, publicaciones, etc de una empresa
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Página para empresa</b>
+                <p>
+                    Página principal para una empresa privada, se desarrolló la sección principal con los diferentes productos 
+                    que ofrecen, además un blog donde la empresa sube noticias relevantes a su giro, un sistema de usuarios
+                    para que usuarios externos puedan registrarse y usuarios internos puedan gestionar el blog.
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Bots transformadores de información</b>
+                <p>
+                    Se desarrollaron bots que emulaban la interacción de una página (fuente de datos), los transformaba e insertaba 
+                    en la base de datos, para que un tercero pueda interactuar con la información final, además se realizaban distintos 
+                    cálculos y estadísticas con la información transformada.
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>FEREME</b>
+                <p>
+                    Plataforma que utiliza una fotógrafa para exponer su trabajo, recibir contactos y enviar los resultados a sus 
+                    clientes finales.
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Gestor de bitácoras</b>
+                <p>
+                    Una empresa realiza reportes semanales y mensuales de las bitácoras de actividades de sus empleados, 
+                    a través de ésta plataforma se dan de alta dichas bitácoras, y se realiza la graficación de los reportes.
+                    Anidado a sus funciones básicas se realizó el sistema de usuarios y roles.
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Sistema de nutrición</b>
+                <p>
+                    Un conjunto de nutriólogas utilizan esta aplicación para gestionar sus clientes, los menús y estadísticas generales 
+                    de sus pacientes.
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>nCreator</b>
+                <p>
+                    script para realización de estructura para un proyecto API Restful
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Punto de venta</b>
+                <p>
+                    Punto de venta, controlador de inventarios y reportes
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Gestor de gimnasion</b>
+                <p>
+                    Sistema creado para la gestión de un gimnasio, administra clientes, suscripciones y rutinas especializadas.
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Página para equipo eSports</b>
+                <p>
+                    Página principal para un equipo de deportes digitales
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+
+                <b>Gestor de créditos</b>
+                <p>
+                    Sistema creado para la administración de créditos de una empresa privada
+                </p>
+                <div>
+                    aqui irian las evidencias o links
+                </div>
+                <br />
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="w3-container" id="contact" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Contacto.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <b>Si quieres contactarme, seguir mi trabajo o saludarme, te dejo mis redes sociales</b>
+            <ul class="w3-ul w3-margin">
+                <li><a href="https://www.github.com/trianarb" target="_blank"><i class="bi bi-github"></i> @trianarb</a></li>
+                <li><a href="https://www.gitlab.com/trianarb" target="_blank"><i class="bi bi-git"></i> @trianarb</a></li>
+                <li><a href="https://www.linkedin.com/in/trianarb/" target="_blank"><i class="bi bi-linkedin"></i> @trianarb</a></li>
+                <li><a href="https://www.instagram.com/trianarb" target="_blank"><i class="bi bi-instagram"></i> @trianarb</a></li>
+            </ul>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+
+</body>
+
+</html>
